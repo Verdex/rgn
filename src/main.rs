@@ -4,7 +4,8 @@ use std::process::Command;
 fn main() {
     let mut args = std::env::args().collect::<Vec<_>>();
     if args.len() != 3 {
-        panic!("usage: rgn <pattern> <pattern>");
+        eprintln!("usage: rgn <pattern> <pattern>");
+        return;
     }
     args.remove(0);
 
